@@ -4,16 +4,27 @@
   <style>
    .svg-holder {
      border: 1px solid black;
-     width: 49%;
+     width: 48%;
      height: 30%;
      display: inline-block;
      overflow: scroll;
+   }
+   .svg-holder g circle:hover {
+     stroke-width: 2px;
+     stroke: black;
+   }
+   .svg-holder g circle.selected {
+     stroke-width: 3px;
+     stroke: black;
    }
 
   </style>
 </head>
 <body>
   <h1>PV251 Project</h1>
+  <div id="controlls"></div>
+  <div id="info"></div>
+  <div id="data-render"></div>
   <script src="lib/d3.min.js" charset="utf-8"></script>
   <script src="main.js" charset="utf-8"></script>
 </body>
