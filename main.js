@@ -1,7 +1,7 @@
 
 
 function main(dataDir) {
-  dataDir = '/data/' + dataDir;
+  dataDir = 'data/' + dataDir;
   d3.csv(dataDir + "/answers.csv", function(answers) {
     d3.csv(dataDir + "/flashcards.csv", function(flashcards) {
       answers = filterData(answers);
@@ -90,7 +90,7 @@ function preprocessData(data, flashcards) {
   }
   var experimentList = [];
   for (i in byExperiment) {
-    //byExperiment[i] = byExperiment[i].sort(sortByLength);
+    byExperiment[i] = byExperiment[i].sort(sortByLength);
     experimentList.push(byExperiment[i]);
   }
 
